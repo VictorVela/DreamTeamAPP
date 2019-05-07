@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "810890314567",
+    "firebase_url": "https://dream-team-opet.firebaseio.com",
+    "project_id": "dream-team-opet",
+    "storage_bucket": "dream-team-opet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810890314567:android:e45d0f02955f482d",
+        "android_client_info": {
+          "package_name": "com.example.dreamteam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "810890314567-7bnp9btgilacdrai19bbjlcttjbnbi4f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dreamteam",
+            "certificate_hash": "6f853a0997faddb93ef1cc09fe18a45b829770cd"
+          }
+        },
+        {
+          "client_id": "810890314567-psar4g51mhjvj0970f9pvapk2ou9nl7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBekXhouuz-p9YGGYpH4lO1Ja8ND143s-4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "810890314567-psar4g51mhjvj0970f9pvapk2ou9nl7j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
