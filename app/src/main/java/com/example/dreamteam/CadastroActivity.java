@@ -53,6 +53,7 @@ public class CadastroActivity extends AppCompatActivity {
         }else{
             Toast.makeText(this, "A senha precisa ter no mínimo 8 caracteres", Toast.LENGTH_LONG).show();
         }
+        
     //------------------------------- CADASTRO --------------------------------------------------//
 
     }
