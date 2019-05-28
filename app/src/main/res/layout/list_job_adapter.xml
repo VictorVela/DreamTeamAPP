@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/nome_job_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="name job"
+        android:paddingLeft="20dp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <TextView
+        android:id="@+id/valor_job_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="valor"
+        android:paddingLeft="20dp"/>
+
+</LinearLayout>

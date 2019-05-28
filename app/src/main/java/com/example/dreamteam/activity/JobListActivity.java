@@ -9,6 +9,7 @@ import android.widget.ListView;
 
 import com.example.dreamteam.R;
 import com.example.dreamteam.model.Job;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -17,13 +18,16 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class JobListActivity extends AppCompatActivity {
 
     private ListView listJob;
     private ListView jobListaDefinitiva;
-    private ArrayList<Job> jobArray = new ArrayList<>();
+    private List<Job> jobs = new ArrayList<Job>();
+    private ArrayAdapter<Job> arrayAdapterJob;
 
+    FirebaseDatabase firebaseDatabase;
     private DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
 
     @Override
@@ -72,6 +76,33 @@ public class JobListActivity extends AppCompatActivity {
 //        );
 
 //        listJob.setAdapter(adapter);
+
+        eventoDataBase();
+    }
+
+    private void eventoDataBase() {
+       reference.child("jobs").addValueEventListener(new ValueEventListener() {
+           @Override
+           public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+               jobs.clear();
+               for (DataSnapshot objSnapshot:dataSnapshot.getChildren()){
+                   Job job = objSnapshot.getValue(Job.class);
+                   jobs.add(job);
+               }
+               arrayAdapterJob = new ArrayAdapter<Job>(JobListActivity.this, R.layout.list_job_adapter);
+           }
+
+           @Override
+           public void onCancelled(@NonNull DatabaseError databaseError) {
+
+           }
+       });
+    }
+
+    private  void inicializarFirebase(){
+        FirebaseApp.initializeApp(JobListActivity.this);
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        reference = firebaseDatabase.getReference();
     }
 
     public void papularListaDeJob(){
