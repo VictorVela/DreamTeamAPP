@@ -24,6 +24,10 @@
             android:id="@+id/nav_job"
             android:icon="@drawable/ic_job_24dp"
             android:title="@string/menu_job" />
+        <item
+            android:id="@+id/nav_pessoa"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="@string/menu_pessoa" />
     </group>
 
     <item android:title="Communicate">

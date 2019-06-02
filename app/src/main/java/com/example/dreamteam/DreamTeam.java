@@ -26,6 +26,7 @@ import com.example.dreamteam.fragment.Information2Fragment;
 import com.example.dreamteam.fragment.InformationFragment;
 import com.example.dreamteam.fragment.JobFragment;
 import com.example.dreamteam.fragment.NewPortifolioFragment;
+import com.example.dreamteam.fragment.PersonFragment;
 import com.example.dreamteam.model.Job;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -158,6 +159,12 @@ public class DreamTeam extends AppCompatActivity
             FindJobFragment findJobFragment = new FindJobFragment();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.frameContainer, findJobFragment);
+            fragmentTransaction.commit();
+
+        }else if (id == R.id.nav_pessoa) {
+            PersonFragment personFragment = new PersonFragment();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frameContainer, personFragment);
             fragmentTransaction.commit();
 
         }else if (id == R.id.nav_contact) {

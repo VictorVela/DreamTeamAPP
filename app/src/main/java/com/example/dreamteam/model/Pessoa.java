@@ -1,10 +1,10 @@
 package com.example.dreamteam.model;
 
-public class Job {
+public class Pessoa {
 
     private String uid;
     private String nome;
-    private String valor;
+    private String email;
 
     public String getUid() {
         return uid;
@@ -22,12 +22,21 @@ public class Job {
         this.nome = nome;
     }
 
-    public String getValor() {
-        return valor;
+    public String getEmail() {
+        return email;
     }
 
-    public void setValor(String valor) {
-        this.valor = valor;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Pessoa(String uid, String nome, String email) {
+        this.uid = uid;
+        this.nome = nome;
+        this.email = email;
+    }
+
+    public Pessoa() {
     }
 
     @Override
