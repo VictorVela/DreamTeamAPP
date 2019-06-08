@@ -12,9 +12,39 @@
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_portifolio"
+            android:icon="@drawable/ic_portifolio_black_24dp"
+            android:title="@string/menu_portifolio" />
+        <item
+            android:id="@+id/nav_find_job"
+            android:icon="@drawable/ic_find_job"
+            android:title="@string/menu_Job_list" />
+        <item
+            android:id="@+id/nav_job"
+            android:icon="@drawable/ic_job_24dp"
+            android:title="@string/menu_job" />
+        <item
+            android:id="@+id/nav_pessoa"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="@string/menu_pessoa" />
     </group>
 
     <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_contact"
+                android:icon="@drawable/ic_email_black_24dp"
+                android:title="@string/action_communicate" />
+            <item
+                android:id="@+id/nav_information"
+                android:icon="@drawable/ic_info_black_24dp"
+                android:title="Information" />
+
+        </menu>
+    </item>
+
+    <item android:title="Log Out">
         <menu>
             <item
                 android:id="@+id/nav_exit"

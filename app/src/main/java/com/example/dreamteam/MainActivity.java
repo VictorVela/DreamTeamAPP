@@ -4,17 +4,13 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
+import com.example.dreamteam.activity.CadastroActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -26,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText     emailImput,senhaImput;
     private FirebaseAuth firebaseAuth;
     String  email, senha;
+    private DatabaseReference referencia = FirebaseDatabase.getInstance().getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
+        referencia.child("pontos").setValue("350");
+
     }
 
     //-----------------VERIFICAR SE ESTÁ LOGADO---------------------------------------------------//
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser user = firebaseAuth.getCurrentUser();
         if(user != null) {
             Toast.makeText(this, "Logado", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getApplicationContext(), InicioActivity.class);
+            Intent intent = new Intent(getApplicationContext(), DreamTeam.class);
             startActivity(intent);
         }
         else {
@@ -64,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSuccess(AuthResult authResult) {
                 Toast.makeText(MainActivity.this,"Logado com sucesso", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext(), Inicio2Activity.class);
+                Intent intent = new Intent(getApplicationContext(), DreamTeam.class);
                 //passar dados
                 intent.putExtra("login do usuario",login);
                 startActivity(intent);

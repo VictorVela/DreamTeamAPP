@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dreamteam">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,12 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.PessoaActivity"></activity>
+        <activity android:name=".activity.JobListActivity" />
         <activity
-            android:name=".Inicio2Activity"
+            android:name=".DreamTeam"
             android:label="@string/title_activity_inicio2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".InicioActivity" />
-        <activity android:name=".CadastroActivity" />
+        <activity android:name=".activity.CadastroActivity" />
         <activity android:name=".EstudosActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

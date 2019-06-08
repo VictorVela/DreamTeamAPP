@@ -22,6 +22,6 @@ public class EstudosActivity extends AppCompatActivity {
         /*
         neste método estamos criando um novo filho para o primeiro caminho do firebase, nó padrão
          */
-        referencia.child("pontos").setValue("100");
+        referencia.child("job").setValue("100");
     }
 }
